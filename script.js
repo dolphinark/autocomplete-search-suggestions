@@ -15,7 +15,8 @@ userInput.onkeyup = (e) => {
       let matchedList = matchedItem.map((element) => {
         return "<li>" + element + "</li>";
       });
-      suggestionList.innerHTML = matchedList.join("");
+      let limitResult = matchedList.slice(0, 5);
+      suggestionList.innerHTML = limitResult.join("");
       suggestionList.style.display = "block";
     }
   } else {
